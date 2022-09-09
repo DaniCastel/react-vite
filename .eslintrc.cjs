@@ -8,15 +8,17 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'airbnb/hooks',
-    'airbnb-typescript'
+    'airbnb-typescript',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 0,
+  },
 };
