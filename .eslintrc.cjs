@@ -9,6 +9,8 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
+    'prettier',
+    'stylelint-config-prettier'
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
