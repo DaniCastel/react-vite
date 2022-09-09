@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './styles/main.scss';
 
 import './App.css';
 import Home from './pages/Home';
@@ -9,16 +10,16 @@ export function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/makeup" element={<MakeUpPage/>}/>
-        <Route path="/" element={<Home/>}/>
-        <Route path="*" element={<NotFoundPage/>}/>
+        <Route path="/makeup" element={<MakeUpPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
 }
 
 
-export function WrappedApp(){
-  return <BrowserRouter><App/></BrowserRouter>
+export function WrappedApp() {
+  return <BrowserRouter><App /></BrowserRouter>
 }
 

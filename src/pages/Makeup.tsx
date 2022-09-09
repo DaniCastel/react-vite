@@ -18,7 +18,7 @@ export const MakeUpPage: FC = () => {
       });
   }, []);
   return (
-    <div>
+    <div className="main">
       <h1>Makeup</h1>
       {loading &&
         <div>A moment please...</div>}
