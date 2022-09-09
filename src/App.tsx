@@ -15,8 +15,8 @@ export function App() {
   );
 }
 
-function WrappedApp(){
+
+export function WrappedApp(){
   return <HashRouter><App/></HashRouter>
 }
 
-export default WrappedApp;
