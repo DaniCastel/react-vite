@@ -1,15 +1,22 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+
 import './App.css';
+import Home from './pages/Home';
+import NotFoundPage from './pages/404';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<NotFoundPage/>}/>
+      </Routes>
     </div>
   );
 }
 
-export default App;
+
+export function WrappedApp(){
+  return <HashRouter><App/></HashRouter>
+}
+
