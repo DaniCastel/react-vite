@@ -1,10 +1,16 @@
-import './App.css';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
+import './App.css';
+import Home from './pages/Home';
+import NotFoundPage from './pages/404';
+
+export function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<NotFoundPage/>}/>
+      </Routes>
     </div>
   );
 }
